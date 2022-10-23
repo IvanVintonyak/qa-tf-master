@@ -1,0 +1,15 @@
+org\example\model\User$Builder.class
+org\example\model\User.class
+org\example\browser\WebDriverFactory$1.class
+org\example\elements\UIElement.class
+org\example\utils\WaitUtils.class
+org\example\elements\TextField.class
+org\example\elements\Button.class
+org\example\pages\MainPage.class
+org\example\pages\Page.class
+org\example\browser\WebDriverFactory.class
+org\example\utils\ConfigProvider.class
+org\example\browser\Browser.class
+org\example\pages\MainPage$RegisterForm.class
+org\example\elements\TextLink.class
+org\example\pages\MainPage$LoginForm.class
