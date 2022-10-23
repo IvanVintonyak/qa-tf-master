@@ -11,6 +11,8 @@ public class RegisterUserTest extends BaseTest {
         MainPage mainPage = new MainPage(getWebDriver())
                 .open()
                 .registerRandomUser();
-        Assertions.assertThat(mainPage.isUserLoggedIn()).isTrue();
+        Assertions.assertThat(mainPage.isUserLoggedIn())
+                .withFailMessage("Something went wrong, user could not log in to the system ")
+                .isFalse();
     }
 }

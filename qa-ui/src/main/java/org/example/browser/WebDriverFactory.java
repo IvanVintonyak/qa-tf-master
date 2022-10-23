@@ -1,6 +1,7 @@
 package org.example.browser;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.example.listeners.HighLighterWebDriverListener;
 import org.example.utils.ConfigProvider;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.events.EventFiringDecorator;
 
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -22,7 +24,14 @@ public class WebDriverFactory {
     private WebDriver driver;
 
     public WebDriver getDriver() {
-        driver = getDriver(Browser.valueOf(BROWSER.toUpperCase()));
+        WebDriver original = getDriver(Browser.valueOf(BROWSER.toUpperCase()));
+
+        if (ConfigProvider.isHighLighted) {
+            driver = new EventFiringDecorator<>(new HighLighterWebDriverListener()).decorate(original);
+        }else {
+            driver = original;
+        }
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(ConfigProvider.DRIVER_WAIT_TIMEOUT));
         return driver;
     }

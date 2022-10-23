@@ -13,6 +13,7 @@ public final class ConfigProvider {
     public static final int DRIVER_WAIT_TIMEOUT = Integer.parseInt(prop.getProperty("driver.wait.timeout"));
 
     public static final String SELENOID_HUB = prop.getProperty("selenoid.hub");
+    public static final boolean isHighLighted = Boolean.parseBoolean(prop.getProperty("highlight"));
 
     private ConfigProvider() {
     }

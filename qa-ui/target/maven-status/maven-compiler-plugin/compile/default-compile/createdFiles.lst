@@ -1,5 +1,6 @@
 org\example\model\User$Builder.class
 org\example\model\User.class
+org\example\listeners\HighLighterWebDriverListener.class
 org\example\browser\WebDriverFactory$1.class
 org\example\elements\UIElement.class
 org\example\utils\WaitUtils.class

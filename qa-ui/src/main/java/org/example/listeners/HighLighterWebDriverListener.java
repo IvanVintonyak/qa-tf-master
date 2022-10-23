@@ -6,23 +6,32 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverListener;
 
-public class HighLighterWebDriver implements WebDriverListener {
+public class HighLighterWebDriverListener implements WebDriverListener {
     private WebElement lastElement;
 
     @Override
     public void beforeFindElement(WebDriver driver, By locator) {
-        WebDriverListener.super.beforeFindElement(driver, locator);
-if(lastElement != null){
-    ((JavascriptExecutor)driver).executeScript("arguments[0].style.border='none' ", lastElement);
-}
-lastElement = null;
+        try {
+            WebDriverListener.super.beforeFindElement(driver, locator);
+            if (lastElement != null) {
+                ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='none' ", lastElement);
+            }
+        } catch (Exception e) {
+        }
+        ;
+
+        lastElement = null;
     }
 
 
     @Override
     public void afterFindElement(WebDriver driver, By locator, WebElement result) {
-        WebDriverListener.super.afterFindElement(driver, locator, result);
-        lastElement = result;
-        ((JavascriptExecutor)driver).executeScript("arguments[0].style.border='3px solid red' ", result);
+        try {
+            WebDriverListener.super.afterFindElement(driver, locator, result);
+            lastElement = result;
+            ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='3px solid red' ", result);
+        } catch (Exception e) {
+        }
+
     }
 }

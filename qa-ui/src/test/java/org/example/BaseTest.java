@@ -9,13 +9,13 @@ public class BaseTest {
 
     private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
 
-    @BeforeMethod
+    @BeforeMethod(description = "Set up hte browser ")
     public void beforeMethod() {
         WebDriver driver = new WebDriverFactory().getDriver();
         setWebDriver(driver);
     }
 
-    @AfterMethod
+    @AfterMethod(description = "quit the WebDriver")
     public void afterMethod() {
         getWebDriver().quit();
     }
