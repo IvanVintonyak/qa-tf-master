@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Main Page test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Oct 24 15:20:31 EEST 2022</td>
+<td>Started on:</td><td>Mon Oct 24 17:33:33 EEST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>43 seconds (43145 ms)</td>
+<tr><td>Total time:</td><td>56 seconds (56285 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,36 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='org.example.RegisterUserTest.registerUserTest()'><b>registerUserTest</b><br>Test class: org.example.RegisterUserTest</td>
-<td><div><pre>org.junit.ComparisonFailure: Something went wrong, user could not log in to the system  expected:&lt;[fals]e&gt; but was:&lt;[tru]e&gt;
-	at org.example.RegisterUserTest.registerUserTest(RegisterUserTest.java:16)
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: Element is not visible (tried for 10 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-DH252H2&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
+Driver info: net.bytebuddy.renamed.java.lang.Object$ByteBuddy$1XrzqlbN
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Ivan\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62182}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62182/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 84b1b2c82f13597cd7adb6e472e122ca
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.utils.WaitUtils.waitElementToDisappear(WaitUtils.java:20)
+	at org.example.pages.MainPage$RegisterForm.fillResisterForm(MainPage.java:104)
+	at org.example.pages.MainPage.registerUser(MainPage.java:36)
+	at org.example.pages.MainPage.registerRandomUser(MainPage.java:72)
+	at org.example.RegisterUserTest.registerUserTest(RegisterUserTest.java:13)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1852314602", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1852314602'><pre>org.junit.ComparisonFailure: Something went wrong, user could not log in to the system  expected:&lt;[fals]e&gt; but was:&lt;[tru]e&gt;
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at org.example.RegisterUserTest.registerUserTest(RegisterUserTest.java:16)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace504644935", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace504644935'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: Element is not visible (tried for 10 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-DH252H2&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
+Driver info: net.bytebuddy.renamed.java.lang.Object$ByteBuddy$1XrzqlbN
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Ivan\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62182}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62182/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 84b1b2c82f13597cd7adb6e472e122ca
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.utils.WaitUtils.waitElementToDisappear(WaitUtils.java:20)
+	at org.example.pages.MainPage$RegisterForm.fillResisterForm(MainPage.java:104)
+	at org.example.pages.MainPage.registerUser(MainPage.java:36)
+	at org.example.pages.MainPage.registerRandomUser(MainPage.java:72)
+	at org.example.RegisterUserTest.registerUserTest(RegisterUserTest.java:13)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
@@ -100,21 +120,54 @@ function toggleAllBoxes() {
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
-<td>18</td>
-<td>org.example.RegisterUserTest@60acd609</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<td>37</td>
+<td>org.example.RegisterUserTest@4ad3d266</td></tr>
 <tr>
 <td title='org.example.LoginUserTest.loginUserTest()'><b>loginUserTest</b><br>Test class: org.example.LoginUserTest</td>
-<td></td>
-<td>25</td>
-<td>org.example.LoginUserTest@2216effc</td></tr>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: Element is not visible (tried for 10 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-DH252H2&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
+Driver info: net.bytebuddy.renamed.java.lang.Object$ByteBuddy$5jP7rV0j
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Ivan\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62188}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62188/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c10f8df30051935c6c9f01c0e5a33bd
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.utils.WaitUtils.waitElementToDisappear(WaitUtils.java:20)
+	at org.example.pages.MainPage$RegisterForm.fillResisterForm(MainPage.java:104)
+	at org.example.pages.MainPage.registerUser(MainPage.java:36)
+	at org.example.LoginUserTest.loginUserTest(LoginUserTest.java:20)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace141065648", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace141065648'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: Element is not visible (tried for 10 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-DH252H2&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
+Driver info: net.bytebuddy.renamed.java.lang.Object$ByteBuddy$5jP7rV0j
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Ivan\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62188}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62188/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c10f8df30051935c6c9f01c0e5a33bd
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.utils.WaitUtils.waitElementToDisappear(WaitUtils.java:20)
+	at org.example.pages.MainPage$RegisterForm.fillResisterForm(MainPage.java:104)
+	at org.example.pages.MainPage.registerUser(MainPage.java:36)
+	at org.example.LoginUserTest.loginUserTest(LoginUserTest.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>36</td>
+<td>org.example.LoginUserTest@50a691d3</td></tr>
 </table><p>
 </body>
 </html>

@@ -9,16 +9,42 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Smoke Test Suite</th></tr>
-<tr><td><a href="#t0">Main Page test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">43 145</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Main Page test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">56 285</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Smoke Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Main Page test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">org.example.RegisterUserTest</td><td><a href="#m0">registerUserTest</a></td><td rowspan="1">1666614047816</td><td rowspan="1">18883</td></tr><tr><th colspan="4">Main Page test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">org.example.LoginUserTest</td><td><a href="#m1">loginUserTest</a></td><td rowspan="1">1666614047823</td><td rowspan="1">25596</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Smoke Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Main Page test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">org.example.LoginUserTest</td><td><a href="#m0">loginUserTest</a></td><td rowspan="1">1666622030461</td><td rowspan="1">36502</td></tr><tr class="failedodd"><td rowspan="1">org.example.RegisterUserTest</td><td><a href="#m1">registerUserTest</a></td><td rowspan="1">1666622030461</td><td rowspan="1">37517</td></tr></tbody>
 </table>
-<h2>Main Page test</h2><h3 id="m0">org.example.RegisterUserTest#registerUserTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.junit.ComparisonFailure: Something went wrong, user could not log in to the system  expected:&lt;[fals]e&gt; but was:&lt;[tru]e&gt;
-	at org.example.RegisterUserTest.registerUserTest(RegisterUserTest.java:16)
+<h2>Main Page test</h2><h3 id="m0">org.example.LoginUserTest#loginUserTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: Element is not visible (tried for 10 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-DH252H2&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
+Driver info: net.bytebuddy.renamed.java.lang.Object$ByteBuddy$5jP7rV0j
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Ivan\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62188}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62188/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c10f8df30051935c6c9f01c0e5a33bd
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.utils.WaitUtils.waitElementToDisappear(WaitUtils.java:20)
+	at org.example.pages.MainPage$RegisterForm.fillResisterForm(MainPage.java:104)
+	at org.example.pages.MainPage.registerUser(MainPage.java:36)
+	at org.example.LoginUserTest.loginUserTest(LoginUserTest.java:20)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">org.example.LoginUserTest#loginUserTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">org.example.RegisterUserTest#registerUserTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: Element is not visible (tried for 10 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-DH252H2&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
+Driver info: net.bytebuddy.renamed.java.lang.Object$ByteBuddy$1XrzqlbN
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Ivan\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62182}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62182/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 84b1b2c82f13597cd7adb6e472e122ca
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.utils.WaitUtils.waitElementToDisappear(WaitUtils.java:20)
+	at org.example.pages.MainPage$RegisterForm.fillResisterForm(MainPage.java:104)
+	at org.example.pages.MainPage.registerUser(MainPage.java:36)
+	at org.example.pages.MainPage.registerRandomUser(MainPage.java:72)
+	at org.example.RegisterUserTest.registerUserTest(RegisterUserTest.java:13)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

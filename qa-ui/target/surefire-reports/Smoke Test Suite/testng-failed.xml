@@ -13,6 +13,13 @@
           <include name="afterMethod"/>
         </methods>
       </class> <!-- org.example.RegisterUserTest -->
+      <class name="org.example.LoginUserTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="loginUserTest"/>
+        </methods>
+      </class> <!-- org.example.LoginUserTest -->
     </classes>
   </test> <!-- Main Page test(failed) -->
 </suite> <!-- Failed suite [Smoke Test Suite] -->

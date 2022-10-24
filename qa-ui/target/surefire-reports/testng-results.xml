@@ -1,33 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-24T15:20:31 EEST" name="Smoke Test Suite" finished-at="2022-10-24T15:21:14 EEST" duration-ms="43145">
+  <suite started-at="2022-10-24T17:33:33 EEST" name="Smoke Test Suite" finished-at="2022-10-24T17:34:30 EEST" duration-ms="56285">
     <groups>
     </groups>
-    <test started-at="2022-10-24T15:20:31 EEST" name="Main Page test" finished-at="2022-10-24T15:21:14 EEST" duration-ms="43145">
+    <test started-at="2022-10-24T17:33:33 EEST" name="Main Page test" finished-at="2022-10-24T17:34:30 EEST" duration-ms="56285">
       <class name="org.example.RegisterUserTest">
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:org.example.RegisterUserTest@60acd609]" started-at="2022-10-24T15:20:31 EEST" name="beforeMethod" description="Set up hte browser " finished-at="2022-10-24T15:20:47 EEST" duration-ms="15691" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:org.example.RegisterUserTest@4ad3d266]" started-at="2022-10-24T17:33:34 EEST" name="beforeMethod" description="Set up hte browser " finished-at="2022-10-24T17:33:50 EEST" duration-ms="16130" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@aa149ed]]>
+                <![CDATA[org.testng.TestRunner@3681037]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="registerUserTest()[pri:0, instance:org.example.RegisterUserTest@60acd609]" started-at="2022-10-24T15:20:47 EEST" name="registerUserTest" finished-at="2022-10-24T15:21:06 EEST" duration-ms="18883" status="FAIL">
-          <exception class="org.junit.ComparisonFailure">
+        <test-method signature="registerUserTest()[pri:0, instance:org.example.RegisterUserTest@4ad3d266]" started-at="2022-10-24T17:33:50 EEST" name="registerUserTest" finished-at="2022-10-24T17:34:27 EEST" duration-ms="37517" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Something went wrong, user could not log in to the system  expected:<[fals]e> but was:<[tru]e>]]>
+              <![CDATA[Expected condition failed: Element is not visible (tried for 10 second(s) with 1000 milliseconds interval)
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-DH252H2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: net.bytebuddy.renamed.java.lang.Object$ByteBuddy$1XrzqlbN
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Ivan\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62182}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62182/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 84b1b2c82f13597cd7adb6e472e122ca]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.junit.ComparisonFailure: Something went wrong, user could not log in to the system  expected:<[fals]e> but was:<[tru]e>
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at org.example.RegisterUserTest.registerUserTest(RegisterUserTest.java:16)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: Element is not visible (tried for 10 second(s) with 1000 milliseconds interval)
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-DH252H2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: net.bytebuddy.renamed.java.lang.Object$ByteBuddy$1XrzqlbN
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Ivan\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62182}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62182/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 84b1b2c82f13597cd7adb6e472e122ca
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at org.example.utils.WaitUtils.waitElementToDisappear(WaitUtils.java:20)
+at org.example.pages.MainPage$RegisterForm.fillResisterForm(MainPage.java:104)
+at org.example.pages.MainPage.registerUser(MainPage.java:36)
+at org.example.pages.MainPage.registerRandomUser(MainPage.java:72)
+at org.example.RegisterUserTest.registerUserTest(RegisterUserTest.java:13)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
@@ -43,15 +57,15 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:833)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.junit.ComparisonFailure -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerUserTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:org.example.RegisterUserTest@60acd609]" started-at="2022-10-24T15:21:07 EEST" name="afterMethod" description="quit the WebDriver" finished-at="2022-10-24T15:21:10 EEST" duration-ms="3079" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:org.example.RegisterUserTest@4ad3d266]" started-at="2022-10-24T17:34:28 EEST" name="afterMethod" description="quit the WebDriver" finished-at="2022-10-24T17:34:30 EEST" duration-ms="1460" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=registerUserTest status=FAILURE method=RegisterUserTest.registerUserTest()[pri:0, instance:org.example.RegisterUserTest@60acd609] output={null}]]]>
+                <![CDATA[[TestResult name=registerUserTest status=FAILURE method=RegisterUserTest.registerUserTest()[pri:0, instance:org.example.RegisterUserTest@4ad3d266] output={null}]]]>
               </value>
             </param>
           </params>
@@ -60,26 +74,64 @@ at java.base/java.lang.Thread.run(Thread.java:833)
         </test-method> <!-- afterMethod -->
       </class> <!-- org.example.RegisterUserTest -->
       <class name="org.example.LoginUserTest">
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:org.example.LoginUserTest@2216effc]" started-at="2022-10-24T15:20:31 EEST" name="beforeMethod" description="Set up hte browser " finished-at="2022-10-24T15:20:47 EEST" duration-ms="15698" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:org.example.LoginUserTest@50a691d3]" started-at="2022-10-24T17:33:34 EEST" name="beforeMethod" description="Set up hte browser " finished-at="2022-10-24T17:33:50 EEST" duration-ms="16128" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@aa149ed]]>
+                <![CDATA[org.testng.TestRunner@3681037]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginUserTest()[pri:0, instance:org.example.LoginUserTest@2216effc]" started-at="2022-10-24T15:20:47 EEST" name="loginUserTest" finished-at="2022-10-24T15:21:13 EEST" duration-ms="25596" status="PASS">
+        <test-method signature="loginUserTest()[pri:0, instance:org.example.LoginUserTest@50a691d3]" started-at="2022-10-24T17:33:50 EEST" name="loginUserTest" finished-at="2022-10-24T17:34:26 EEST" duration-ms="36502" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: Element is not visible (tried for 10 second(s) with 1000 milliseconds interval)
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-DH252H2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: net.bytebuddy.renamed.java.lang.Object$ByteBuddy$5jP7rV0j
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Ivan\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62188}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62188/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c10f8df30051935c6c9f01c0e5a33bd]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: Element is not visible (tried for 10 second(s) with 1000 milliseconds interval)
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-DH252H2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: net.bytebuddy.renamed.java.lang.Object$ByteBuddy$5jP7rV0j
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Ivan\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62188}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62188/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c10f8df30051935c6c9f01c0e5a33bd
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at org.example.utils.WaitUtils.waitElementToDisappear(WaitUtils.java:20)
+at org.example.pages.MainPage$RegisterForm.fillResisterForm(MainPage.java:104)
+at org.example.pages.MainPage.registerUser(MainPage.java:36)
+at org.example.LoginUserTest.loginUserTest(LoginUserTest.java:20)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginUserTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:org.example.LoginUserTest@2216effc]" started-at="2022-10-24T15:21:13 EEST" name="afterMethod" description="quit the WebDriver" finished-at="2022-10-24T15:21:14 EEST" duration-ms="1312" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:org.example.LoginUserTest@50a691d3]" started-at="2022-10-24T17:34:28 EEST" name="afterMethod" description="quit the WebDriver" finished-at="2022-10-24T17:34:29 EEST" duration-ms="1881" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginUserTest status=SUCCESS method=LoginUserTest.loginUserTest()[pri:0, instance:org.example.LoginUserTest@2216effc] output={null}]]]>
+                <![CDATA[[TestResult name=loginUserTest status=FAILURE method=LoginUserTest.loginUserTest()[pri:0, instance:org.example.LoginUserTest@50a691d3] output={null}]]]>
               </value>
             </param>
           </params>

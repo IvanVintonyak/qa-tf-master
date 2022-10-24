@@ -1,8 +1,24 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 48.092 s <<< FAILURE! - in TestSuite
-registerUserTest(org.example.RegisterUserTest)  Time elapsed: 19.731 s  <<< FAILURE!
-org.junit.ComparisonFailure: Something went wrong, user could not log in to the system  expected:<[fals]e> but was:<[tru]e>
-	at org.example.RegisterUserTest.registerUserTest(RegisterUserTest.java:16)
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 61.525 s <<< FAILURE! - in TestSuite
+loginUserTest(org.example.LoginUserTest)  Time elapsed: 37.529 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: Element is not visible (tried for 10 second(s) with 1000 milliseconds interval)
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-DH252H2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: net.bytebuddy.renamed.java.lang.Object$ByteBuddy$5jP7rV0j
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Ivan\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62188}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62188/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c10f8df30051935c6c9f01c0e5a33bd
+	at org.example.LoginUserTest.loginUserTest(LoginUserTest.java:20)
+
+registerUserTest(org.example.RegisterUserTest)  Time elapsed: 38.185 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: Element is not visible (tried for 10 second(s) with 1000 milliseconds interval)
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-DH252H2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: net.bytebuddy.renamed.java.lang.Object$ByteBuddy$1XrzqlbN
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Ivan\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62182}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62182/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 84b1b2c82f13597cd7adb6e472e122ca
+	at org.example.RegisterUserTest.registerUserTest(RegisterUserTest.java:13)
 
