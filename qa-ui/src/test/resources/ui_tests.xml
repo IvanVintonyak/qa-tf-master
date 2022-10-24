@@ -2,7 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Smoke Test Suite" verbose="0" thread-count="2" parallel="methods">
-
+<listeners>
+    <listener class-name="org.example.listeners.TakeScreenshotListener"></listener>
+</listeners>
     <test name="Main Page test">
         <classes>
             <class name="org.example.RegisterUserTest"/>

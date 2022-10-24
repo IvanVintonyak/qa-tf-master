@@ -1,10 +1,13 @@
 org\example\model\User$Builder.class
+org\example\listeners\TakeScreenshotListener.class
 org\example\model\User.class
 org\example\listeners\HighLighterWebDriverListener.class
 org\example\browser\WebDriverFactory$1.class
 org\example\elements\UIElement.class
+org\example\utils\ScreenshotUtils.class
 org\example\utils\WaitUtils.class
 org\example\elements\TextField.class
+org\example\constants\TestConstants.class
 org\example\elements\Button.class
 org\example\pages\MainPage.class
 org\example\pages\Page.class
