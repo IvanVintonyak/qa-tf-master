@@ -13,6 +13,6 @@ public class RegisterUserTest extends BaseTest {
                 .registerRandomUser();
         Assertions.assertThat(mainPage.isUserLoggedIn())
                 .withFailMessage("Something went wrong, user could not log in to the system ")
-                .isFalse();
+                .isTrue();
     }
 }

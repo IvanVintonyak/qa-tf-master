@@ -106,7 +106,7 @@ public class MainPage extends Page {
     }
 
     public class LoginForm {
-        public final TextField userNameLogin = new TextField(driver, By.id("username-modal"),"User Name Login");
+        public final TextField userNameLogin = new TextField(driver, By.id("username-modal"), "User Name Login");
         public final TextField passwordLogin = new TextField(driver, By.id("password-modal"), "User  passwordLogin");
         public final Button loginButton = new Button(driver, By.xpath("//button[@onclick='return login()']"));
 
