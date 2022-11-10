@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import static org.hamcrest.Matchers.emptyString;
 import static org.hamcrest.Matchers.not;
 
-public class UserTest2 extends UserBaseTest {
+public class UserTest extends UserBaseTest {
 
 
     @Test

@@ -12,7 +12,7 @@ import org.apache.http.Header;
 @RequiredArgsConstructor
 public class AssertableResponse {
     public final Response response;
-@Step
+@Step("then api response should have:{condition}")
 
     public AssertableResponse shouldHave(Condition condition) {
         log.info("About to check condition {}", condition);

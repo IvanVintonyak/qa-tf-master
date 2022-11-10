@@ -4,7 +4,7 @@
 <suite name="API Test Suite" verbose="0" thread-count="2" parallel="methods">
     <test name="Main Page test">
         <classes>
-            <class name="comsocksapi.UserTest2"/>
+            <class name="comsocksapi.UserTest"/>
         </classes>
     </test>
 </suite>

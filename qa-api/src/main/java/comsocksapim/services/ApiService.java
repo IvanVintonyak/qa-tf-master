@@ -1,6 +1,7 @@
 package comsocksapim.services;
 
 import comsocksapim.config.ProjectConfigImpl;
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.Filter;
@@ -35,11 +36,12 @@ public class ApiService  implements ProjectConfigImpl {
         if (config.logging()) {
             return Arrays.asList(
                     new RequestLoggingFilter(),
-                    new ResponseLoggingFilter()
+                    new ResponseLoggingFilter(),
+                    new AllureRestAssured()
             );
 
         } else {
-            return Collections.emptyList();
+            return Collections.singletonList(new AllureRestAssured());
         }
     }
 }
