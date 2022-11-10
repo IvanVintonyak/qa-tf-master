@@ -25,10 +25,7 @@ public class UserTest1 {
 
     @Test
     public void testCanRegisterNewUser() {
-//        UserModel user = new UserModel();
-//        user.setUsername(RandomStringUtils.randomAlphabetic(6));
-//        user.setEmail("test@mail.com");
-//        user.setPassword("test123");
+
 
         UserModel user = new UserModel()
                 .username(RandomStringUtils.randomAlphabetic(6))

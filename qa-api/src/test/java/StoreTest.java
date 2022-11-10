@@ -8,17 +8,17 @@ import org.testng.annotations.Test;
 import static org.hamcrest.Matchers.*;
 
 public class StoreTest {
-    public static final String  API_URL ="https://petstore.swagger.io/v2";
+    public static final String API_URL = "https://petstore.swagger.io/v2";
 
-    public RequestSpecification getRequestSpecification(){
-      return new RequestSpecBuilder()
+    public RequestSpecification getRequestSpecification() {
+        return new RequestSpecBuilder()
                 .setBaseUri(API_URL)
                 .setRelaxedHTTPSValidation()
                 .build();
     }
 
     @Test
-    public void getStoreInventoryTest(){
+    public void getStoreInventoryTest() {
         RestAssured
                 .given(getRequestSpecification())
                 .contentType(ContentType.JSON).log().all()

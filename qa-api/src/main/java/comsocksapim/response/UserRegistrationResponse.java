@@ -9,8 +9,8 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class UserRegistrationResponse{
+public class UserRegistrationResponse {
 
-	@JsonProperty("id")
-	private String id;
+    @JsonProperty("id")
+    private String id;
 }

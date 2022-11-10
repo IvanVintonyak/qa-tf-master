@@ -6,14 +6,14 @@ import org.hamcrest.Matcher;
 
 
 @RequiredArgsConstructor
-public class BodyFieldCondition implements Condition{
+public class BodyFieldCondition implements Condition {
 
     private final String jsonPath;
     private final Matcher<String> matcher;
 
     @Override
     public void check(Response response) {
-       response.then().body(jsonPath, matcher);
+        response.then().body(jsonPath, matcher);
     }
 
     @Override
